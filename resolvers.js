@@ -1,16 +1,35 @@
 const Article = require("./models/article-model");
-const { v4: uuidv4 } = require("uuid");
-
+const mongoose = require("mongoose");
 
 const resolvers = {
     Query: {
-        async getArticle(_, { id }, __) {
-            const article = await Article.findOne({ id }).exec();
+         async getArticleByTitle(_, { title }, __) {
+             var regexp = new RegExp("^"+ title);
+            const article = await Article.findOne({title: regexp }).exec();
             if (article) {
                 return article;
             }
             return "Something went wrong";
-        }
+        },
+    },
+
+    Mutation: {
+        async createArticle(_, { title, link, sourceUrl }, __) {
+            const article = await Article({
+                title,
+                link,
+                sourceUrl
+            });
+            await article.save().then(result => result).catch(error => { throw new Error(error); });
+            try {
+                if (article != null) {
+                    return "A new article has been created!";
+                }
+            }
+            catch (error) {
+                throw new Error(error);
+            }
+        },
     }
 };
 

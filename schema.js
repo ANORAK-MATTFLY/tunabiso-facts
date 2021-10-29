@@ -2,14 +2,17 @@ const { gql } = require("apollo-server");
 
 const typeDefs = gql`
     type Article {
-        id: String!
         title: String!
         link: String!
         sourceUrl: String!
     }
 
     type Query {
-        getArticle(id : String!): Article!
+        getArticleByTitle(title : String!): Article!
+    }
+
+    type Mutation {
+        createArticle(title: String!, link: String!, sourceUrl: String!): String!
     }
 `;
 
