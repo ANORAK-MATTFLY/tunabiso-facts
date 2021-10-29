@@ -1,0 +1,9 @@
+{
+  "name": "tunabiso_api",
+  "version": "0.0.0",
+  "main": "server.js",
+  "repository": "https://github.com/ANORAK-MATTFLY/tunabiso-facts.git",
+  "author": "ANORAK-MATTFLY",
+  "license": "MIT",
+  "private": true
+}
