@@ -9,6 +9,7 @@
   "start": "nodemon server.js",
   "dependencies": {
     "@apollo/federation": "^0.33.3",
+    "@vonage/server-sdk": "^2.10.10",
     "apollo-server": "^3.4.0",
     "apollo-server-express": "^3.4.0",
     "dotenv": "^10.0.0",
