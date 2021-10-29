@@ -9,6 +9,7 @@ const typeDefs = gql`
 
     type Query {
         getArticleByTitle(title : String!): Article!
+        getAllArticles: [Article!]
     }
 
     type Mutation {
