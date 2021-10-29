@@ -19,8 +19,9 @@ const mongoConfig = {
 };
 
 const server = new ApolloServer({
-    schema: buildFederatedSchema([{ typeDefs, resolvers }])
-});
+    typeDefs,
+    resolvers,
+  });
 
 
 mongoose.connect(`mongodb+srv://${process.env.MONGO_USERNAME}:${process.env.MONGO_PASSWORD}@cluster0.ojnan.mongodb.net/blog${process.env.MONGO_DATABASE}?retryWrites=true&w=majority`, mongoConfig).then(() =>
