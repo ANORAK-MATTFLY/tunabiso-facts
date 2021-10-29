@@ -19,11 +19,6 @@ const mongoConfig = {
 const server = new ApolloServer({
     typeDefs,
     resolvers,
-    plugins: [
-        ApolloServerPluginLandingPageGraphQLPlayground({
-          // options
-        })
-      ]
   });
 
 
