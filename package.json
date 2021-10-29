@@ -5,5 +5,16 @@
   "repository": "https://github.com/ANORAK-MATTFLY/tunabiso-facts.git",
   "author": "ANORAK-MATTFLY",
   "license": "MIT",
-  "private": true
+  "private": true,
+  "start": "nodemon server.js",
+  "dependencies": {
+    "@apollo/federation": "^0.33.3",
+    "apollo-server": "^3.4.0",
+    "apollo-server-express": "^3.4.0",
+    "dotenv": "^10.0.0",
+    "graphql": "15.5.0",
+    "mongoose": "^6.0.12",
+    "nodemon": "^2.0.14",
+    "uuid": "^8.3.2"
+  }
 }
