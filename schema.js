@@ -9,7 +9,7 @@ const typeDefs = gql`
     }
 
     type Query {
-        getArticle(id : String!): Article!
+        getArticle(title : String!): Article!
     }
 `;
 

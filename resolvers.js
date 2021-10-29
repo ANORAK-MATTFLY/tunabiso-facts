@@ -1,15 +1,11 @@
-const Article = require("./models/article-model");
-const { v4: uuidv4 } = require("uuid");
-
+const {data} = require('./data/articles.js');
 
 const resolvers = {
     Query: {
-        async getArticle(_, { id }, __) {
-            const article = await Article.findOne({ id }).exec();
-            if (article) {
-                return article;
-            }
-            return "Something went wrong";
+        getArticle(_, { title }, __) {
+            return data.filter(article => {
+                article.title == title;
+            });
         }
     }
 };
