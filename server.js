@@ -13,22 +13,17 @@ if (port == null || port == "") {
 
 const mongoConfig = {
     useNewUrlParser: true,
-    useUnifiedTopology: true,
-    //useCreateIndex: true,
-    //useFindAndModify: true,
-    //useFindAndModify: false,
-    //useCreatendex: true, 
-    //useFindAndModify: false, 
+    useUnifiedTopology: true, 
 };
 
 const server = new ApolloServer({
     typeDefs,
     resolvers,
-    plugins: [
-        ApolloServerPluginLandingPageGraphQLPlayground({
+    //plugins: [
+      //  ApolloServerPluginLandingPageGraphQLPlayground({
           // options
-        })
-      ]
+        //})
+      //]
   });
 
 
