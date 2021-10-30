@@ -12,7 +12,7 @@ const ArticleSchema = new Schema({
         required: true,
     },
     sourceUrl: {
-        type: Array,
+        type: String,
         require: false,
     }
 });

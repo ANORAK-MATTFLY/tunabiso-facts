@@ -11,6 +11,14 @@ const resolvers = {
             }
             return "Something went wrong";
         },
+
+        async getAllArticles(_, args, __) {
+            try {
+                return Article.find({});
+            } catch (error) {
+                return error;
+            }
+        },
     },
 
     Mutation: {
